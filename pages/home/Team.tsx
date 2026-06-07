@@ -2,12 +2,13 @@
 import { motion } from "framer-motion";
 import IconSvg from "@/assets/images/icon-sub-heading.svg";
 import Image from "next/image";
+import LeadOfTeamImg from "@/assets/images/team-member/lead-of-team.png"
 
 const teamMembers = [
   {
     name: "Tarek Mahmud",
     role: "Lead of Logic Lab",
-    image: "https://i.postimg.cc/zXzWvdP3/photo-2025-05-06-12-09-07.jpg",
+    image: LeadOfTeamImg,
   },
   {
     name: "Michael Anderson",
@@ -82,14 +83,15 @@ const Team = () => {
               transition={{ duration: 0.5, delay: 0.1 * idx }}
               className="relative group rounded-3xl overflow-hidden aspect-[3/4] max-w-sm mx-auto w-full shadow-lg"
             >
-              <img
+              <Image
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
               />
 
               {/* Gradient Overlay bottom to top */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#04150e] via-[#04150e]/60 to-transparent opacity-90"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-[#04150e] via-[#04150e]/60 to-transparent opacity-90"></div>
 
               {/* Content Container */}
               <div className="absolute inset-0 flex flex-col justify-end p-8 text-center z-10">
