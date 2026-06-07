@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import IconSvg from "@/assets/images/icon-sub-heading.svg";
 import Image from "next/image";
-import LeadOfTeamImg from "@/assets/images/team-member/lead-of-team.png"
+import LeadOfTeamImg from "@/assets/images/team-member/lead-of-team.png";
 
 const teamMembers = [
   {
@@ -91,7 +91,7 @@ const Team = () => {
               />
 
               {/* Gradient Overlay bottom to top */}
-              <div className="absolute inset-0 bg-linear-to-t from-[#04150e] via-[#04150e]/60 to-transparent opacity-90"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-linear-to-t from-[#04150e] via-[#04150e]/60 to-transparent opacity-90"></div>
 
               {/* Content Container */}
               <div className="absolute inset-0 flex flex-col justify-end p-8 text-center z-10">
@@ -128,9 +128,7 @@ const Team = () => {
                 <h4 className="text-2xl font-medium text-white mb-2">
                   {member.name}
                 </h4>
-                <p className="text-[#10b981] text-xl">
-                  {member.role}
-                </p>
+                <p className="text-[#10b981] text-xl">{member.role}</p>
               </div>
             </motion.div>
           ))}
