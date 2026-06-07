@@ -6,7 +6,7 @@ import Image from "next/image";
 const teamMembers = [
   {
     name: "Tarek Mahmud",
-    role: "Chief Executive Officer",
+    role: "Lead of Logic Lab",
     image: "https://i.postimg.cc/zXzWvdP3/photo-2025-05-06-12-09-07.jpg",
   },
   {
