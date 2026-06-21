@@ -32,7 +32,7 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (
-    <section className="w-full bg-white py-24">
+    <section id="faq" className="w-full bg-white py-24">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-stretch">
           

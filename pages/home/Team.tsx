@@ -32,7 +32,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <section className="w-full bg-white text-gray-900 py-24 pb-32">
+    <section id="team" className="w-full bg-white text-gray-900 py-24 pb-32">
       <div className="container mx-auto px-6">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">

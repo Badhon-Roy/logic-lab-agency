@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="relative w-full bg-white text-gray-900 overflow-hidden py-20 md:py-28">
+    <section id="about" className="relative w-full bg-white text-gray-900 overflow-hidden py-20 md:py-28">
 
       {/* Subtle light grid overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.4] bg-[linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
@@ -124,70 +124,89 @@ const About = () => {
             </motion.div>
           </div>
 
-          {/* Center: Photo 1 */}
-          <motion.div
-            initial={{ opacity: 0, y: 40, scale: 0.93 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.1 } as const}
-            className="relative overflow-hidden rounded-2xl min-h-[340px] md:min-h-full group shadow-sm"
-          >
-            {/* Rotating contact badge */}
-            <div className="absolute bottom-5 right-5 z-10 w-20 h-20">
+          {/* Right column wrapping both photos and the overlay badge */}
+          <div className="md:col-span-2 relative grid grid-cols-1 sm:grid-cols-2 gap-5 items-stretch">
+            {/* Center: Photo 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 40, scale: 0.93 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.1 } as const}
+              className="relative overflow-hidden rounded-2xl min-h-[340px] md:min-h-full group shadow-sm"
+            >
+              <img
+                src="https://demo.awaikenthemes.com/covar/wp-content/uploads/2026/04/about-us-image-1-stone.jpg"
+                alt="Logic Lab team collaboration"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
+            </motion.div>
+
+            {/* Right: Photo 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 40, scale: 0.93 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.2 } as const}
+              className="relative overflow-hidden rounded-2xl min-h-[340px] md:min-h-full group shadow-sm"
+            >
+              <img
+                src="https://demo.awaikenthemes.com/covar/wp-content/uploads/2026/04/about-us-image-2-stone.jpg"
+                alt="Logic Lab agency work"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
+
+              {/* Stat badge */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                className="absolute bottom-5 right-5 bg-white/90 backdrop-blur-sm border border-emerald-200 rounded-xl px-4 py-3 shadow-md"
+              >
+                <div className="text-emerald-600 font-medium text-xl font-mono">100%</div>
+                <div className="text-gray-600 text-sm font-medium mt-0.5">Client Satisfaction</div>
+              </motion.div>
+            </motion.div>
+
+            {/* Centered Rotating Contact Badge overlapping the middle gap */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-28 h-28 sm:w-36 sm:h-36 flex items-center justify-center pointer-events-none">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
-                className="w-full h-full"
+                className="w-full h-full pointer-events-auto"
               >
-                <svg viewBox="0 0 80 80" className="w-full h-full">
+                <svg viewBox="0 0 80 80" className="w-full h-full drop-shadow-[0_10px_20px_rgba(0,0,0,0.15)]">
                   <defs>
-                    <path id="circle-text-about" d="M 40,40 m -28,0 a 28,28 0 1,1 56,0 a 28,28 0 1,1 -56,0"/>
+                    <path id="circle-text-about" d="M 40,40 m -22.5,0 a 22.5,22.5 0 1,1 45,0 a 22.5,22.5 0 1,1 -45,0"/>
                   </defs>
-                  <circle cx="40" cy="40" r="38" fill="white" stroke="rgba(16,185,129,0.4)" strokeWidth="1.5"/>
-                  <text fill="rgba(5,150,105,0.9)" fontSize="7.5" fontFamily="monospace" letterSpacing="2.8" fontWeight="600">
-                    <textPath href="#circle-text-about">• CONTACT US • CONTACT US •</textPath>
+                  {/* Outer border & white background */}
+                  <circle cx="40" cy="40" r="35" fill="#10B981" stroke="#FFFFFF" strokeWidth="8"/>
+                  
+                  {/* Text */}
+                  <text fill="#101828" fontSize="7" fontFamily="sans-serif" fontWeight="bold" letterSpacing="0.2">
+                    <textPath href="#circle-text-about" startOffset="0%">
+                      Contact Us * Contact Us * Contact Us *
+                    </textPath>
                   </text>
-                  <circle cx="40" cy="40" r="10" fill="rgba(16,185,129,0.1)" stroke="rgba(16,185,129,0.4)" strokeWidth="1"/>
-                  <text x="40" y="44" textAnchor="middle" fill="#059669" fontSize="10">✦</text>
+                  
+                  {/* Central green circle */}
+                  <circle cx="40" cy="40" r="14.5" fill="#113e21" />
+                  
+                  {/* Crossroads white icon */}
+                  <g fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M 36.5,40 L 43.5,40 M 40,36.5 L 40,43.5" />
+                    <circle cx="40" cy="40" r="2" fill="#113e21" stroke="white" strokeWidth="1.2" />
+                    <circle cx="34" cy="40" r="0.9" fill="white" stroke="none" />
+                    <circle cx="46" cy="40" r="0.9" fill="white" stroke="none" />
+                    <circle cx="40" cy="34" r="0.9" fill="white" stroke="none" />
+                    <circle cx="40" cy="46" r="0.9" fill="white" stroke="none" />
+                  </g>
                 </svg>
               </motion.div>
             </div>
-
-            <img
-              src="https://demo.awaikenthemes.com/covar/wp-content/uploads/2026/04/about-us-image-1-stone.jpg"
-              alt="Logic Lab team collaboration"
-              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
-          </motion.div>
-
-          {/* Right: Photo 2 */}
-          <motion.div
-            initial={{ opacity: 0, y: 40, scale: 0.93 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.2 } as const}
-            className="relative overflow-hidden rounded-2xl min-h-[340px] md:min-h-full group shadow-sm"
-          >
-            <img
-              src="https://demo.awaikenthemes.com/covar/wp-content/uploads/2026/04/about-us-image-2-stone.jpg"
-              alt="Logic Lab agency work"
-              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
-
-            {/* Stat badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="absolute bottom-5 right-5 bg-white/90 backdrop-blur-sm border border-emerald-200 rounded-xl px-4 py-3 shadow-md"
-            >
-              <div className="text-emerald-600 font-medium text-xl font-mono">100%</div>
-              <div className="text-gray-600 text-sm font-medium mt-0.5">Client Satisfaction</div>
-            </motion.div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

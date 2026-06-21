@@ -354,7 +354,7 @@ const Banner = () => {
             </motion.main>
 
             {/* Footer Stats / Bento Badges Section */}
-            <footer className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-12 pt-8 border-t border-emerald-500/5">
+            <footer id="stats" className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-12 pt-8 border-t border-emerald-500/5">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 {/* Card 1: UI/UX Design */}
