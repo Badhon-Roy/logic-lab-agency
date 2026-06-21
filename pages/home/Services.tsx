@@ -47,7 +47,7 @@ const Services = () => {
       {/* Subtle light grid overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.4] bg-[linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
 
-      <div className="relative z-10 container mx-auto px-6 max-w-7xl">
+      <div className="relative z-10 container mx-auto px-6">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
           <motion.div
