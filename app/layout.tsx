@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Logic Lab Agency",
+  title: "Logic Lab",
   description: "A modern digital agency specializing in scalable architecture, UI/UX, and engineering solutions.",
 };
 

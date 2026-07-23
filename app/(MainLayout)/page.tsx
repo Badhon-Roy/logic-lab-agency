@@ -1,6 +1,7 @@
 import Banner from "@/pages/home/Banner";
 import About from "@/pages/home/About";
 import Services from "@/pages/home/Services";
+import Projects from "@/pages/home/Projects";
 import WhyChooseUs from "@/pages/home/WhyChooseUs";
 import Team from "@/pages/home/Team";
 import Testimonials from "@/pages/home/Testimonials";
@@ -15,6 +16,7 @@ export default function Home() {
       <Banner />
       <About />
       <Services />
+      <Projects />
       <WhyChooseUs />
       <Team />
       <Testimonials />
