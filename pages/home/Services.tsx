@@ -7,35 +7,35 @@ import IconSvg from "@/assets/images/icon-sub-heading.svg";
 
 const services = [
   {
-    title: "Life Insurance",
-    description: "Secure your family's financial future with reliable life coverage plans.",
-    image: "https://demo.awaikenthemes.com/covar/wp-content/uploads/2026/03/service-1.jpg",
-    tag: "Insurance",
+    title: "UI/UX Design",
+    description: "Creating high-fidelity wireframes, interactive user flows, and aesthetic design assets that define your brand.",
+    image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80",
+    tag: "Creative UI/UX",
     icon: (
       <svg className="w-6 h-6 text-[#10b981]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
     ),
   },
   {
-    title: "Health Insurance",
-    description: "Get cashless hospitalization medical coverage & critical illness protection.",
-    image: "https://demo.awaikenthemes.com/covar/wp-content/uploads/2026/03/service-2.jpg",
-    tag: "Health Management",
+    title: "Web & App Development",
+    description: "Engineering pixel-perfect web frontends (Next.js) and native cross-platform mobile apps (Flutter) built for performance.",
+    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80",
+    tag: "Next.js & Flutter",
     icon: (
       <svg className="w-6 h-6 text-[#10b981]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
       </svg>
     ),
   },
   {
-    title: "Vehicle Insurance",
-    description: "Comprehensive car & bike insurance covering accidents, theft, natural events.",
-    image: "https://demo.awaikenthemes.com/covar/wp-content/uploads/2026/03/service-3.jpg",
-    tag: "Car Insurance",
+    title: "Backend & Automation",
+    description: "Designing robust server-side APIs, database systems, and automated operations sync using N8N workflows.",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    tag: "APIs & N8N Sync",
     icon: (
       <svg className="w-6 h-6 text-[#10b981]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
       </svg>
     ),
   },
@@ -67,7 +67,7 @@ const Services = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.08] text-gray-900"
           >
-            Smart protection plans for life
+            Smarter digital solutions for your business
           </motion.h2>
 
           <motion.p
@@ -77,7 +77,7 @@ const Services = () => {
             transition={{ delay: 0.2 }}
             className="text-gray-500 text-sm sm:text-base leading-relaxed mt-4"
           >
-            With flexible coverage options, affordable premiums, and expert guidance, we help you safeguard your future while ensuring peace of mind at every stage of life.
+            We engineer tailormade web architectures, creative interface designs, and smooth automation pipelines to help your business scale efficiently.
           </motion.p>
         </div>
 
