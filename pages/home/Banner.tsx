@@ -314,7 +314,7 @@ const Banner = () => {
                       transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
                       className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.8)]"
                     ></motion.span>
-                    LOGIC LAB AGENCY
+                    LOGIC LAB TEAM
                     <motion.span 
                       animate={{ scale: [1, 1.25, 1] }}
                       transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", delay: 0.5 }}
